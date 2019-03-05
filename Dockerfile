@@ -1,4 +1,5 @@
-FROM base/archlinux
+FROM archlinux/base
+
 MAINTAINER Benjamin Deininger "https://github.com/bdeining"
 
 # JAVA
