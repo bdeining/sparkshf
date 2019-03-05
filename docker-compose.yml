@@ -1,4 +1,4 @@
 version: "2.2"
 services:
   master:
-    image: bdeining/spark-master
+    image: bdeining/spark-master:latest
