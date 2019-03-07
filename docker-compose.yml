@@ -2,3 +2,4 @@ version: "2.2"
 services:
   master:
     image: bdeining/spark-master:latest
+    command: tail -f /dev/null
