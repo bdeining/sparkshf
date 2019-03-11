@@ -2,12 +2,17 @@ FROM archlinux/base
 
 MAINTAINER Benjamin Deininger "https://github.com/bdeining"
 
-RUN pacman -Sy --noconfirm tar
-RUN pacman -Sy --noconfirm jdk8-openjdk
-RUN pacman -Sy --noconfirm wget
-RUN wget http://apache.claz.org/hadoop/common/hadoop-3.2.0/hadoop-3.2.0.tar.gz
+# User
+RUN useradd -m archlinuxuser
+RUN su archlinuxuser
 
-RUN tar -zxvf hadoop-3.2.0.tar.gz
+RUN pacman -Sy --noconfirm tar
+RUN pacman -Sy --noconfirm git
+RUN pacman -Sy --noconfirm jdk8-openjdk
+
+
+RUN git clone https://aur.archlinux.org/hadoop.git
+RUN cd hadoop
 
 # JAVA
 RUN archlinux-java set java-8-openjdk
