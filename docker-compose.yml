@@ -1,5 +1,5 @@
 version: "2.2"
 services:
   master:
-    image: bdeining/spark-master:latest
+    image: bdeining/spark-master:1.0
     command: tail -f /dev/null
